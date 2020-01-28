@@ -92,10 +92,6 @@ function makeSmartPerson(name) {
   return newObject;
 }
 
-
-
-
-
 /*
 // ⭐️ Example Test Data ⭐️
 
@@ -313,9 +309,18 @@ const argTimesTwo = (num) => num * 2;
  *         (1) causes the odometer in the object to be increased by the distance,
  *         (2) returns the updated value of the `odometer`.
 */
-function carMaker(/* code here */) {
-  /* code here */
-}
+function carMaker(odometer) {
+  const odometerObject = {
+    odometer: odometer,
+    drive: function(distance) {
+      // Can also do this.odometer
+      odometerObject.odometer += distance;
+      return odometerObject.odometer;
+    }
+  }
+      return odometerObject;
+  }
+
 
 /// ////// END OF CHALLENGE /////////
 /// ////// END OF CHALLENGE /////////
